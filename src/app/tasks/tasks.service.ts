@@ -5,6 +5,7 @@ import { Task } from "./task.model";
 })
 export class TasksService {
     tasks = signal<Task[]>([])
+    allTasks = this.tasks.asReadonly()
     
     addTask(taskData:{title:string,description:string}){
 
